@@ -31,10 +31,6 @@ img {
     padding: 5px;
 }
 
-.boxes {
-    box-shadow: 0px 0px 15px 15px solid black;
-}
-
 .box1 {
     grid-column-start: 1;
     grid-column-end: 1;
@@ -147,12 +143,7 @@ footer {
 
 html{
     background: url(/img/macOS-Monterey-wallpaper-Light-2048x2048.jpg);
+    background-attachment: fixed;
     background-repeat: no-repeat;
-    background-size: 100%;
-}
-
-.scoreboard{
-    text-align: center;
-    margin: 10px;
-    margin-bottom: 15px;
+    background-size: cover;
 }

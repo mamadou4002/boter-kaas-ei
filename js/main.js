@@ -1,122 +1,84 @@
-let wins=0
-let computerwins=0
-
+const images = document.querySelectorAll('.img-box');
 
 //default settings
 let turn = false;
-//turn=false betekent speler
-//turn=true betekent computer
 
 function placeXO(data) {
-    // console.log(data);
-    if (data.target.attributes[0].nodeValue == "img/blank.png") {
-        if (turn == false) {
+   // console.log(data);
+    if(data.target.attributes[0].nodeValue == "img/blank.png") {
+        if(turn == false) {
             data.target.attributes[0].nodeValue = "img/x.png"
             turn = true;
-            document.getElementById("turn").innerText = "o turn"
-            ComputerMove()
-
+            document.getElementById("turn").innerText= "o turn"
         }
-        
+        else{
+            data.target.attributes[0].nodeValue = "img/o.png"
+            turn = false;
+            document.getElementById("turn").innerText="x turn"
+        }
     }
-    // console.log(images[0].src);
+   // console.log(images[0].src);
     checkWin();
 }
-function ComputerMove(){
-    let allboxes=document.querySelectorAll(".img-box")
-    let emptyboxes=[]
 
-    for (let i=0;i< allboxes.length;i++){
-        if(allboxes[i].src.includes("blank")){
-            emptyboxes.push(allboxes[i]);
-        }
-    }
+function checkWin(){
 
-    console.log(emptyboxes)
-    emptyboxes[Math.floor(Math.random() * emptyboxes.length)].src="img/o.png"
-    turn=false
-}
-
-function checkWin() {
-
-    const boxes = document.querySelectorAll('.img-box');
-    if (boxes[0].src == 'http://127.0.0.1:5500/img/x.png' &&
-        boxes[1].src == 'http://127.0.0.1:5500/img/x.png' &&
-        boxes[2].src == 'http://127.0.0.1:5500/img/x.png') {
-        console.log("x wins")
-        resetGame(true)
-    }
-
-    if (boxes[3].src == "http://127.0.0.1:5500/img/x.png" &&
-        boxes[4].src == "http://127.0.0.1:5500/img/x.png" &&
-        boxes[5].src == "http://127.0.0.1:5500/img/x.png") {
-        console.log("x wins")
-        resetGame(true)
-    }
-    if (boxes[6].src == "http://127.0.0.1:5500/img/x.png" &&
-        boxes[7].src == "http://127.0.0.1:5500/img/x.png" &&
-        boxes[8].src == "http://127.0.0.1:5500/img/x.png") {
-        console.log("x wins")
-        resetGame(true)
-    }
-
-   
-    if (boxes[0].src == "http://127.0.0.1:5500/img/x.png" &&
-        boxes[4].src == "http://127.0.0.1:5500/img/x.png" &&
-        boxes[8].src == "http://127.0.0.1:5500/img/x.png") {
-        console.log("x wins")
-        resetGame(true)
-    }
-    if (boxes[2].src == "http://127.0.0.1:5500/img/x.png" &&
-        boxes[4].src == "http://127.0.0.1:5500/img/x.png" &&
-        boxes[6].src == "http://127.0.0.1:5500/img/x.png") {
-        console.log("x wins")
-        resetGame(true)
-    }
-
-    if (boxes[0].src == "http://127.0.0.1:5500/img/x.png" &&
-        boxes[3].src == "http://127.0.0.1:5500/img/x.png" &&
-        boxes[6].src == "http://127.0.0.1:5500/img/x.png") {
-        console.log("x wins")
-        resetGame(true)
-    }
-
-    let isPossible=false
-    for (let i = 0; i < boxes.length; i++) {
-        if(boxes[i].src.toString().includes("blank")){
-            isPossible=true
+     const boxes = document.querySelectorAll('.img-box');
+     console.log(boxes)
+     if (boxes[0].src== '/css tic tak to/img/x.png' && 
+            boxes[1].src== '/css tic tak to/img/x.png' &&
+            boxes[2].src== '/css tic tak to/img/x.png' ) {
+            console.log("x wins")
         }
 
-    }
-    if(isPossible==false){
-        resetGame()
-    }
-
-    document.getElementById("wins").innerText=wins
-    document.getElementById("computerwins").innerText=computerwins
-
+    if(boxes[3].src=="/css tic tak to/img/x.png" &&
+            boxes[4].src=="/css tic tak to/img/x.png" &&
+            boxes[5].src=="/css tic tak to/img/x.png" ){ 
+            console.log("x wins")
+            }
+    if(boxes[6].src=="/css tic tak to/img/x.png" &&
+             boxes[7].src=="/css tic tak to/img/x.png" &&
+             boxes[8].src=="/css tic tak to/img/x.png"){
+             console.log("x wins")
+        }
     
+     for (let i = 0; i < boxes.length; i++) {
+        console.log( i + ' ' + boxes[i].src);
+
+     }
+     if(boxes[0].src=="/css tic tak to/img/x.png" &&
+     boxes[4].src=="/css tic tak to/img/x.png" &&
+     boxes[8].src=="/css tic tak to/img/x.png"){
+     console.log("x wins")
 }
-
-function resetGame(gewonnen){
-    const boxes=document.querySelectorAll(".img-box")
-
-    for(let i =0;i<boxes.length;i++){
-        boxes[i].src="img/blank.png"
-       boxes[i].addEventListener("click",placeXO)
-    }
-    turn=false
-
-    if (gewonnen != null) {
-        if (gewonnen==true) {
-            wins+=1
+if(boxes[2].src=="/css tic tak to/img/x.png" &&
+             boxes[4].src=="/css tic tak to/img/x.png" &&
+             boxes[6].src=="/css tic tak to/img/x.png"){
+             console.log("x wins")
         }
-        
-        if(gewonnen==false){
-            computerwins+=1
+
+        if(boxes[0].src=="/css tic tak to/img/x.png" &&
+             boxes[3].src=="/css tic tak to/img/x.png" &&
+             boxes[6].src=="/css tic tak toe/img/x.png"){
+             console.log("x wins")
         }
-    }
     
+     for (let i = 0; i < boxes.length; i++) {
+        console.log( i + ' ' + boxes[i].src);
+
+     }
+
+for (let i = 0; i < boxes.length; i++) {
+console.log( i + ' ' + boxes[i].src);
+
+}
+}
+for (let i = 0; i < images.length; i++) {
+    images[i].addEventListener('click', placeXO)
 }
 
-resetGame()
+while(images[0].src == "/css tic tak to/img/x.png"){
+    console.log("jah");
+}
+
+console.log('loaded');
