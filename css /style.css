@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 100px);
+    gap: 10px;
+    width: 340px;
+    margin: auto;
+    font-size: 80px;
+}
+
+header{
+    margin: auto;
+    font-size: large;
+    text-align: center;
+}
+
+div{
+    border-radius: 10px;
+}
+
+.boxes:hover{
+    background-color: rgb(242, 133, 224)
+}
+
+img {
+    width: 80%;
+    padding: 5px;
+}
+
+.boxes {
+    box-shadow: 0px 0px 15px 15px solid black;
+}
+
+.box1 {
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 1;
+    grid-row-end: 1;
+    border: 1px solid black;
+    background-color: rgb(197, 100, 227);
+    text-align: center;
+}
+
+.box2 {
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 1;
+    border: 1px solid black;
+    background-color: rgb(197, 100, 227)
+    
+}
+
+.box3 {
+    grid-column-start: 4;
+    grid-column-end: 4;
+    grid-row-start: 4;
+    grid-row-end: 1;
+    border: 1px solid black;
+    background-color: rgb(197, 100, 227)
+    
+}
+
+.box4 {
+    grid-column-start: 3;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 1;
+    border: 1px solid black;
+    background-color: rgb(197, 100, 227);
+    text-align: center;
+}
+
+.box5 {
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 2;
+    grid-row-end: 2;
+    border: 1px solid black;
+    background-color: rgb(197, 100, 227);
+    text-align: center;
+}
+
+.box6 {
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 2;
+    border: 1px solid black;
+    background-color: rgb(197, 100, 227);
+    text-align: center;
+}
+
+.box7 {
+    grid-column-start: 3;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 2;
+    border: 1px solid black;
+    background-color: rgb(197, 100, 227);
+    text-align: center;
+}
+
+.box8 {
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 3;
+    grid-row-end: 3;
+    border: 1px solid black;
+    background-color: rgb(197, 100, 227);
+    text-align: center;
+}
+
+.box9 {
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 3;
+    border: 1px solid black;
+    background-color: rgb(197, 100, 227);
+    text-align: center;
+}
+
+.box10 {
+    grid-column-start: 3;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 3;
+    border: 1px solid black;
+    background-color: rgb(197, 100, 227);
+    text-align: center;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 45px;
+    text-align: center;
+    color: antiquewhite;
+    
+}
+
+html{
+    background: url(/img/macOS-Monterey-wallpaper-Light-2048x2048.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.scoreboard{
+    text-align: center;
+    margin: 10px;
+    margin-bottom: 15px;
+}
